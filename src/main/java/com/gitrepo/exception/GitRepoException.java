@@ -14,5 +14,10 @@ public class GitRepoException extends RuntimeException {
         this.errorMessageEnum = errorMessageEnum;
     }
 
+    public GitRepoException(ErrorMessageEnum errorMessageEnum, String message) {
+        super(message);
+        this.errorMessageEnum = errorMessageEnum;
+    }
+
 
 }

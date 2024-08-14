@@ -1,4 +1,4 @@
-package com.gitrepo.exception.handler;
+package com.gitrepo.config.exceptionhandler;
 
 import com.gitrepo.common.enums.ErrorMessageEnum;
 import com.gitrepo.exception.GitRepoException;
@@ -17,11 +17,10 @@ public class RestTemplateErrorHandler implements ResponseErrorHandler {
 
     @Override
     public void handleError(ClientHttpResponse response) throws IOException {
-        if (response.getStatusCode() == HttpStatus.NOT_FOUND)
-        {
+        if (response.getStatusCode() == HttpStatus.NOT_FOUND) {
             throw new GitRepoException(ErrorMessageEnum.OWNER_REPO_NOT_FOUNT);
         }
 
-        throw new GitRepoException(ErrorMessageEnum.INTERNAL_SERVER_ERROR);
+        throw new GitRepoException(ErrorMessageEnum.ERROR_WHILE_RETRIEVING_DATA);
     }
 }

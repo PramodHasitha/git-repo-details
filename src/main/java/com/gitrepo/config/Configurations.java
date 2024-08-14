@@ -1,6 +1,6 @@
 package com.gitrepo.config;
 
-import com.gitrepo.exception.handler.RestTemplateErrorHandler;
+import com.gitrepo.config.exceptionhandler.RestTemplateErrorHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cache.CacheManager;
