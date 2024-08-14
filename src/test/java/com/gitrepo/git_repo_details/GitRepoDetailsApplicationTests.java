@@ -46,22 +46,4 @@ class GitRepoDetailsApplicationTests {
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andExpect(MockMvcResultMatchers.jsonPath("$.full_name").value("full/name"));
 	}
-
-
-
-	@Test
-	void getRepositoryDetailsTest1() throws Exception {
-		RepositoryDetails mockResponse = new RepositoryDetails();
-		mockResponse.setFull_name("full/name");
-		mockResponse.setDescription("description");
-		mockResponse.setClone_url("http://clone.url");
-		mockResponse.setStargazers_count(100);
-		mockResponse.setCreated_at(LocalDateTime.now());
-//		Mockito.when(restTemplate.getForObject(Mockito.anyString(), Mockito.eq(RepositoryDetails.class), Mockito.anyMap())).thenReturn(mockResponse);
-
-		mockMvc.perform(MockMvcRequestBuilders.get("/repositories/owner/repoName"))
-				.andExpect(MockMvcResultMatchers.status().isOk())
-				.andExpect(MockMvcResultMatchers.jsonPath("$.full_name").value("full/name"));
-	}
-
 }

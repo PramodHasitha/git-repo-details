@@ -109,7 +109,7 @@ For deployment, you can package the application as a JAR file and deploy it on a
 
 ```bash
 mvn package
-java -jar target/github-repo-details-service-0.0.1-SNAPSHOT.jar
+java -jar target/git-repo-details-0.0.1-SNAPSHOT.jar
 ```
 
 ## Contributing
